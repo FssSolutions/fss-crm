@@ -1,6 +1,17 @@
 -- FSS CRM — Initial Schema
 -- Run this in the Supabase SQL Editor
 
+-- Drop existing policies (safe if not present)
+drop policy if exists "user_only" on clients;
+drop policy if exists "user_only" on communications;
+drop policy if exists "user_only" on quotes;
+drop policy if exists "user_only" on quote_line_items;
+drop policy if exists "user_only" on jobs;
+drop policy if exists "user_only" on invoices;
+drop policy if exists "user_only" on expenses;
+drop policy if exists "user_only" on price_book;
+drop policy if exists "user_only" on tasks;
+
 -- Drop existing tables (safe if empty)
 drop table if exists tasks, expenses, quote_line_items, invoices, jobs, quotes, communications, price_book, clients cascade;
 
