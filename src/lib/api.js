@@ -7,7 +7,7 @@ function headers(token) {
   return {
     'Content-Type': 'application/json',
     apikey: ANON,
-    Authorization: `Bearer ${token || ANON}`,
+    Authorization: `Bearer ${token}`,
     Prefer: 'return=representation',
   };
 }
